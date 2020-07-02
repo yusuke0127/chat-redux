@@ -1,7 +1,57 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
 body {
   font-family: Helvetica;
+
 }
 .app {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  display: flex;
+  min-height: 100vh;
+  min-width: 100vw;
+
+
+  .side-bar {
+    padding-top: 16px;
+    background: lightgray;
+    width: 5%;
+    text-align: center;
+    img {
+      width: 80%;
+    }
+  }
+  .channels {
+    // padding: 16px;
+    padding: 4px;
+    width: 20%;
+    background: white;
+  }
+  .messages {
+    // padding: 16px;
+    min-height: 100vh;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+  }
+}
+.messages {
+  .message-channel {
+    padding: 4px;
+    display: flex;
+    // align-items: center;
+    flex: 1;
+  }
+  .message_list {
+    padding: 4px;
+
+    flex-grow: 8;
+  }
+  .message-input {
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
 }

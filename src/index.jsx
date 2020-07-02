@@ -9,6 +9,14 @@ import App from './components/app';
 import '../assets/stylesheets/application.scss';
 
 // State and reducers
+const intitialState = {
+  messages: [],
+  channels: ["#general", "#react", "#tokyo"],
+  message: null,
+  selectedChannel: "#general",
+
+
+};
 const reducers = combineReducers({
   changeMe: (state = null, action) => state
 });
