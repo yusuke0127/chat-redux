@@ -1,7 +1,9 @@
 // TODO: add and export your own actions
-export function setMessages() {
+import messages from '../messages';
+
+export function fetchMessages() {
   return {
-    type: 'SET_MESSAGES',
+    type: 'FETCH_MESSAGES',
     payload: messages
   };
 }
