@@ -19,9 +19,9 @@ class MessageList extends Component {
         </div>
         <div className="message_list">
           <ul className="list-group">
-            {/*this.props.messages.map((message, index) => {
+            {this.props.messages.map((message, index) => {
               return <Message message={message} index={index} key={message.author} />;
-            })*/}
+            })}
           </ul>
         </div>
         <div className="message-input">
