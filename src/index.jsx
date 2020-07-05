@@ -9,11 +9,15 @@ import reduxPromise from 'redux-promise';
 // internal modules
 import App from './components/app';
 import '../assets/stylesheets/application.scss';
-import messagesReducer from './reducers/messages_reducer';
-import selectedChannelReducer from './reducers/selected_channel_reducer';
+
 // import messages from './messages';
 
 // State and reducers
+import messagesReducer from './reducers/messages_reducer';
+import selectedChannelReducer from './reducers/selected_channel_reducer';
+
+const identityReducer = (state = null) => state;
+
 const intitialState = {
   messages: [],
   channels: ["general", "react", "tokyo"],
@@ -23,7 +27,8 @@ const intitialState = {
 
 const reducers = combineReducers({
   messages: messagesReducer,
-  selectedChannel: selectedChannelReducer
+  selectedChannel: selectedChannelReducer,
+  currentUser: identityReducer
   // changeMe: (state = null, action) => state
 });
 

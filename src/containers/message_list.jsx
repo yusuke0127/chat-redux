@@ -42,8 +42,9 @@ function mapDispatchToProps(dispatch) {
 function mapStateToProps(state) {
   return {
     messages: state.messages,
-    selectedChannel: state.selectedChannel,
+    selectedChannel: state.selectedChannel
   };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(MessageList);
+
