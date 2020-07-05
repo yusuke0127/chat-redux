@@ -22,7 +22,7 @@ class MessageList extends Component {
         <div className="message_list">
           <ul className="list-group">
             {this.props.messages.map((message, index) => {
-              return <Message message={message} index={index} key={message.author} channel={message.selectedChannel} />;
+              return <Message message={message} index={index} key={message.id} />;
             })}
           </ul>
         </div>
@@ -42,7 +42,7 @@ function mapDispatchToProps(dispatch) {
 function mapStateToProps(state) {
   return {
     messages: state.messages,
-    selectedChannel: state.selectedChannel
+    selectedChannel: state.selectedChannel,
   };
 }
 
