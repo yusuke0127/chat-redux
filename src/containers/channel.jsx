@@ -5,9 +5,8 @@ import { selectChannel, fetchMessages } from '../actions';
 
 class Channel extends Component {
   handleClick = () => {
-    console.log('clicking');
-    console.log(this.props);
-    this.props.selectChannel(this.props.channel)
+    // console.log(this.props);
+    this.props.selectChannel(this.props.channel);
     this.props.fetchMessages(this.props.channel);
   }
 
