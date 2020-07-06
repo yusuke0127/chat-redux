@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 
 
 class ChannelList extends Component {
@@ -11,4 +13,11 @@ class ChannelList extends Component {
   }
 }
 
-export default ChannelList;
+function mapStateToProps(state) {
+  return {
+    messages: state.channels,
+    selectedChannel: state.selectedChannel
+  };
+}
+
+export default connect(mapStateToprops, null)(ChannelList);
