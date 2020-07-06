@@ -28,7 +28,8 @@ const intitialState = {
 const reducers = combineReducers({
   messages: messagesReducer,
   selectedChannel: selectedChannelReducer,
-  currentUser: identityReducer
+  currentUser: identityReducer,
+  channels: identityReducer
   // changeMe: (state = null, action) => state
 });
 

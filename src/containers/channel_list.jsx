@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-
+import Channel from './channel';
 
 class ChannelList extends Component {
   render() {
     return (
-      <div className="channels">
-        <h3>Workspace</h3>
+      <div className="channels-container">
+        <h3>Chat</h3>
+        <ul className="channel-list">
+          {this.props.channels.map((channel) => {
+            return <Channel channel={channel} key={channel.id} />;
+          })
+          }
+        </ul>
       </div>
     );
   }
@@ -15,9 +21,9 @@ class ChannelList extends Component {
 
 function mapStateToProps(state) {
   return {
-    messages: state.channels,
+    channels: state.channels,
     selectedChannel: state.selectedChannel
   };
 }
 
-export default connect(mapStateToprops, null)(ChannelList);
+export default connect(mapStateToProps, null)(ChannelList);

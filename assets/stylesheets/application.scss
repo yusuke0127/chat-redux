@@ -21,7 +21,7 @@ body {
       width: 80%;
     }
   }
-  .channels {
+  .channels-container {
     // padding: 16px;
     padding: 4px;
     width: 20%;
@@ -43,7 +43,7 @@ body {
     // align-items: center;
     flex: 1;
   }
-  .message_list {
+  .message-list {
     padding: 4px;
 
     flex-grow: 8;
@@ -54,4 +54,10 @@ body {
     align-items: center;
     flex: 1;
   }
+}
+
+.list-item {
+  background-color: transparent;
+  cursor: pointer;
+  list-style: none;
 }
