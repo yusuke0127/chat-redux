@@ -1,4 +1,4 @@
-import {emojify} from 'react-emojione';
+import { emojify } from 'react-emojione';
 import React, { Component } from 'react';
 
 function hashCode(str) { // java String#hashCode
