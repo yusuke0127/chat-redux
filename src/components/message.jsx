@@ -1,3 +1,4 @@
+import {emojify} from 'react-emojione';
 import React, { Component } from 'react';
 
 function hashCode(str) { // java String#hashCode
@@ -16,10 +17,11 @@ class Message extends Component {
   render() {
     const author = this.props.message.author;
     const date = new Date(this.props.message.created_at).toLocaleTimeString();
+    const content = this.props.message.content;
     return (
       <li className="list-group-item">
         <span style={{ color: hashCode(author) }}>{author}</span> - <small> {date}</small>
-        <p>{this.props.message.content}</p>
+        <p>{emojify(content)}</p>
       </li>
     );
   }
